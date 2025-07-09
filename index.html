@@ -1,52 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>love you</title>
 
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
 
-      <style>
-  body {
-    background-image: url('bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    .audio-container {
-    text-align: center;
+  <style>
+    body {
+      background-image: url('bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: black; 
+      font-family: 'Signika', sans-serif; 
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
     }
-    color: black; 
-    font-family: 'Signika', sans-serif; 
-    animation:none;
-    transition:all .0s ease;}
-  </style>
-      </head>
 
-      <title>love you</title>
-      <link href="style.css" rel="stylesheet" type="text/css" />
-      <script>
-        alert("Halo angga");
-        alert("Mas mau omong beberapa hal");
-        alert("Kamu baca ya?");
-        alert(" Tahu gak, awalnya mas gak ngira kalo mas bakal se cinta ini sama kamu, kwkwk.");
-        alert("Padahal kita ketemuan gara gara mafia doang.");
-        alert("Tapi sekarang, malah mas yang sampe kecintaan ");
-        alert("Makasih ya sayang? Udah mau nemenin mas sampe titik ini?");
-        alert("Udah mau ngertiin mas, dan gak pernah memaksakan kehendak ke mas");
-        alert("Mas cinta banget sama kamu, ini mas gak bohong.");
-        alert("I love you, Angga. I love you the most, i love you more than a lots.");
-      </script>
-    <div class="audio-container">
-      <audio controls>
-          <source src="1000 tahun.mp3" type="audio/mpeg">
-          Browser Anda tidak mendukung elemen audio.
-      </audio>
-    </head>
-    <center><h1>message love for you</center></h1>
-    <center><img src="couple.jpg" style="width:300px;height:20 0px;" style="display:block; margin:auto; align="middle"></center>
-    <p> Terima kasih karena sudah menemani Mas sampai di titik ini. Perjalanan kita mungkin tidak selalu mulus, tapi kamu tetap ada, tetap bertahan, dan itu bukan hal yang Mas anggap remeh. Mas menghargai setiap waktu, tawa, dan diam yang kita bagi bersama.</p>
-    <p>Mas juga bersyukur karena cinta ini tumbuh tanpa paksaan. Kamu tidak menuntut Mas untuk menjadi orang lain, dan Mas pun merasa tenang bisa mencintai kamu dengan cara yang sederhana. Semua terasa lebih ringan karena kamu tidak pernah memaksa, hanya menerima.
-</p>
-    <p>Dari Mas, terima kasih karena sudah memilih untuk bertahan. Terima kasih karena mau mencintai Mas dengan cara yang jujur dan apa adanya. Mas mungkin tidak bisa janji banyak, tapi Mas akan terus berusaha jadi orang yang layak untuk kamu temani.</p> 
-  </html 
+    .audio-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 10px auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .balloon {
+      width: 40px;
+      height: 60px;
+      background-color: pink;
+      border-radius: 50% 50% 45% 45%;
+      position: absolute;
+      bottom: -100px;
+      animation: float 6s ease-in infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    async function startMessage() {
+       alert("Halo pemilik hatiku");
+        alert("Hari ini adalah hari spesial yah");
+        alert("Ada kutipan kecil dari orang ganteng nih");
+        alert("Spesial buat sayangku");
+        alert("Penasaran gak?");
+        alert("Penasaran apa egk?");
+        alert("Cius nih penasaran?");
+        alert("Ah yang bener?");
+        alert("Wkwkwkwwk becanda ah ini serius nih");
+        alert("Aku sayang kamu");
+
+      // Munculin balon setelah semua alert
+      for (let i = 0; i < 30; i++) {
+        const balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.left = Math.random() * 100 + "vw";
+
+        // warna pastel acak
+        const pastelHue = Math.floor(Math.random() * 360);
+        balloon.style.backgroundColor = `hsl(${pastelHue}, 100%, 85%)`;
+
+        // delay animasi random biar gak barengan
+        balloon.style.animationDelay = `${Math.random() * 2}s`;
+
+        document.body.appendChild(balloon);
+      }
+    }
+
+    // jalanin pas halaman selesai dimuat
+    window.onload = startMessage;
+  </script>
+
+  <div class="audio-container">
+    <audio controls>
+      <source src="1000 tahun.mp3" type="audio/mpeg">
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+  </div>
+
+  <h1>Happy Birthday</h1>
+  <img src="couple.jpg" alt="Foto couple">
+
+  <p>Selamat ulang tahun kesayangan ku, harap harap segala keinginan kamu terwujud yah, dan segala sesuatu yang kamu inginkan lekas tercapai, kamu sih gak ijinin belik hadiah aku kan bingung mau ngasih apa *cuikh* oiyah aku juga punya permintaan khusus buat kamu jangan pernah bosen samaku yah, i love you bol </p>
+</body>
+</html>
